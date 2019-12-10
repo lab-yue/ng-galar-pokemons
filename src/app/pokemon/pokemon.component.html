@@ -1,0 +1,8 @@
+<li>
+  <span>{{ pokemon.galarId }}</span>
+  <span>{{ pokemon.id }}</span>
+  <span class="badge">{{ pokemon.name }}</span>
+  <span *ngFor="let pokemonType of pokemon.types" class="badge">
+    {{ pokemonType }}
+  </span>
+</li>
