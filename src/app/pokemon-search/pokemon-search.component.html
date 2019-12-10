@@ -3,11 +3,11 @@
     <app-pokemon-type-tag
       [pokemonType]="pokemonType.cn"
       [ngClass]="{
-        selected: isSelected(pokemonType.en),
+        selected: isSelected(pokemonType.cn),
         'not-selected': value.length
       }"
       #search
-      (click)="onClick(pokemonType.en)"
+      (click)="onClick(pokemonType.cn)"
     >
     </app-pokemon-type-tag>
   </ng-container>

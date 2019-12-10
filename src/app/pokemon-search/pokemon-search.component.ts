@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import pokemonTypes from "../../assets/pokemonTypes.json";
+import { SelectedPokemonTypesService } from "../selected-pokemon-types.service";
 
 @Component({
   selector: "app-pokemon-search",
@@ -7,7 +8,9 @@ import pokemonTypes from "../../assets/pokemonTypes.json";
   styleUrls: ["./pokemon-search.component.scss"]
 })
 export class PokemonSearchComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private selectedPokemonTypesService: SelectedPokemonTypesService
+  ) {}
 
   pokemonTypes = Object.entries(pokemonTypes).map(([cn, en]) => ({
     cn,
@@ -20,15 +23,16 @@ export class PokemonSearchComponent implements OnInit {
   }
 
   onClick(value: string) {
-    console.log(this.value);
     if (this.isSelected(value)) {
       this.value = this.value.filter(v => v !== value);
+      this.selectedPokemonTypesService.nextSelect(this.value);
       return;
     }
     if (this.value.length === 2) {
       this.value.shift();
     }
     this.value.push(value);
+    this.selectedPokemonTypesService.nextSelect(this.value);
   }
 
   ngOnInit() {}
