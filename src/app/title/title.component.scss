@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "ubuntu";
+  src: url("/assets/Ubuntu-Regular.subset.woff2") format("woff2");
+}
+h1 {
+  font-family: "ubuntu";
+  background-color: var(--app-red);
+  color: var(--app-white);
+  margin: 0;
+  text-shadow: 0 0 5px #333;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px #ccc;
+}
