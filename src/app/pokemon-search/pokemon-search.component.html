@@ -1,1 +1,14 @@
-<input #search (keyup)="onKey(search.value)" />
+<div class="search">
+  <ng-container *ngFor="let pokemonType of pokemonTypes">
+    <app-pokemon-type-tag
+      [pokemonType]="pokemonType.cn"
+      [ngClass]="{
+        selected: isSelected(pokemonType.en),
+        'not-selected': value.length
+      }"
+      #search
+      (click)="onClick(pokemonType.en)"
+    >
+    </app-pokemon-type-tag>
+  </ng-container>
+</div>

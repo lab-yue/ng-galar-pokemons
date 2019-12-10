@@ -1,0 +1,20 @@
+{
+  "草": "grass",
+  "火": "fire",
+  "水": "water",
+  "虫": "bug",
+  "超能力": "psychic",
+  "飞行": "flying",
+  "电": "electric",
+  "一般": "normal",
+  "钢": "steel",
+  "恶": "dark",
+  "岩石": "rock",
+  "地面": "ground",
+  "毒": "poison",
+  "冰": "ice",
+  "幽灵": "ghost",
+  "格斗": "fighting",
+  "妖精": "fairy",
+  "龙": "dragon"
+}

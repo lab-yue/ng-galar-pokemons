@@ -2,3 +2,18 @@ input {
   display: block;
   margin: 2rem auto;
 }
+
+app-pokemon-type-tag {
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+.selected {
+  opacity: 1;
+}
+.not-selected:not(.selected) {
+  opacity: 0.1;
+}
+
+.search {
+  margin: 2rem auto;
+}

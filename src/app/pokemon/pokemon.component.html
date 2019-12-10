@@ -1,8 +1,15 @@
-<li>
-  <span>{{ pokemon.galarId }}</span>
-  <span>{{ pokemon.id }}</span>
+<li class="pokemon">
+  <span class="index">{{ pokemon.galarId }}</span>
+  <!--  <span>{{ pokemon.id }}</span>-->
   <span class="badge">{{ pokemon.name }}</span>
-  <span *ngFor="let pokemonType of pokemon.types" class="badge">
-    {{ pokemonType }}
+  <span class="types">
+    <ng-container *ngFor="let pokemonType of pokemon.types">
+      <app-pokemon-type-tag
+        [pokemonType]="pokemonType"
+        *ngIf="pokemonType"
+        class="badge"
+      >
+      </app-pokemon-type-tag>
+    </ng-container>
   </span>
 </li>
